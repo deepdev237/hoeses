@@ -130,12 +130,12 @@ def SnowBalling():
                 elif event.key == K_LEFT:
                     if not moveMaxX > 20:
                         moveMaxX += 1
-                    if moveMaxY >= 1:
+                    if moveMaxY > 1:
                         moveMaxY -= 1
                 elif event.key == K_RIGHT:
-                    if not moveMaxY > 20:
-                        moveMaxY += 1
-                    if not moveMaxX > 20:
+                    if not (moveMaxY > 20):
+                        moveMaxY += 2
+                    if not (moveMaxX > 20):
                         moveMaxX += 1
         
         pygame.display.update()
